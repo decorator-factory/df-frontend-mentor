@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@100..900&display=swap');
+
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: white;
+
+  --border-radius: 8px;
+}
+
+body {
+  background: var(--cream);
+
+  display: flex;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+img.icon {
+  display: inline-block;
+}
+
+.btn {
+  font-family: 'Montserrat';
+  background-color: var(--green-500);
+  color: var(--white);
+  font-weight: 700;
+
+  &:hover {
+    background-color: var(--green-700);
+  }
+
+  padding-block: 1.25em;
+}
+
+.product-card {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--grey);
+
+  background-color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  max-width: 21.5rem;
+
+  border-radius: var(--border-radius);
+
+  /* Clip image using border radius automatically  */
+  overflow: hidden;
+
+  >._info {
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    >._category {
+      text-transform: uppercase;
+      letter-spacing: 0.5ch;
+      font-size: 0.75rem;
+    }
+
+    >h2 {
+      font-family: 'Fraunces';
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--black);
+      margin-bottom: 0.5rem;
+    }
+
+    >._description {
+      line-height: 1.6;
+    }
+
+    >._prices {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      :nth-child(1) {
+        color: var(--green-500);
+        font-family: 'Fraunces';
+        font-size: 2rem;
+
+        /* ...instead of gap, to avoid a vertical gap when wrapping*/
+        margin-right: 1rem;
+      }
+
+      :nth-child(2) {
+        text-decoration: line-through;
+      }
+    }
+
+    button {
+      border: none;
+      border-radius: var(--border-radius);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1ch;
+    }
+  }
+}
