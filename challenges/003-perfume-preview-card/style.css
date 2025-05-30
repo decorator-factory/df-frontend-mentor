@@ -35,11 +35,15 @@ body {
   color: var(--white);
   font-weight: 700;
 
+  padding-block: 0.8rem;
+
   &:hover {
     background-color: var(--green-700);
   }
 
-  padding-block: 0.8rem;
+  &:focus {
+    outline: 2px solid var(--green-700);
+  }
 }
 
 .card-prices {
