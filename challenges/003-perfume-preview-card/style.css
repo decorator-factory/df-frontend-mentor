@@ -22,7 +22,7 @@ body {
   align-items: center;
 }
 
-img.icon {
+:is(img, picture).icon {
   display: inline-block;
 }
 
@@ -36,7 +36,7 @@ img.icon {
     background-color: var(--green-700);
   }
 
-  padding-block: 1.25em;
+  padding-block: 0.8rem;
 }
 
 .product-card {
@@ -51,6 +51,16 @@ img.icon {
   flex-direction: column;
   max-width: 21.5rem;
 
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    max-width: 35.125rem;
+    max-height: 26.25rem;
+
+    >* {
+      flex: 0 0 50%;
+    }
+  }
+
   border-radius: var(--border-radius);
 
   /* Clip image using border radius automatically  */
@@ -58,6 +68,10 @@ img.icon {
 
   >._info {
     padding: 1.5rem;
+
+    @media (min-width: 1200px) {
+      padding: 2rem;
+    }
 
     display: flex;
     flex-direction: column;
