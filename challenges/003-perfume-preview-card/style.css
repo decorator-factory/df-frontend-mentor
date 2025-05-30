@@ -10,6 +10,9 @@
   --white: white;
 
   --border-radius: 8px;
+
+  --font-prose: 'Montserrat', sans-serif;
+  --font-fancy: 'Fraunces', 'Courier New', monspace;
 }
 
 body {
@@ -30,7 +33,7 @@ body {
   border: none;
   border-radius: var(--border-radius);
 
-  font-family: 'Montserrat';
+  font-family: var(--font-prose);
   background-color: var(--green-500);
   color: var(--white);
   font-weight: 700;
@@ -55,7 +58,7 @@ body {
 
   :nth-child(1) {
     color: var(--green-500);
-    font-family: 'Fraunces';
+    font-family: var(--font-fancy);
     font-size: 2rem;
 
     /* ...instead of gap, to avoid a vertical gap when wrapping*/
@@ -63,13 +66,13 @@ body {
   }
 
   :nth-child(2) {
-    font-family: 'Montserrat';
+    font-family: var(--font-prose);
     text-decoration: line-through;
   }
 }
 
 .product-card {
-  font-family: 'Montserrat';
+  font-family: var(--font-prose);
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--grey);
@@ -113,7 +116,7 @@ body {
     }
 
     >h2 {
-      font-family: 'Fraunces';
+      font-family: var(--font-fancy);
       font-weight: 700;
       font-size: 2rem;
       line-height: 1;
